@@ -1,0 +1,16 @@
+@media (max-width: 480px) {
+
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+    html{
+        width: 300px;
+    }
+    .modal-dialog {
+         width: 300px;
+   }
+    .fcmain{
+	   background: lightslategrey;
+  }
+}
