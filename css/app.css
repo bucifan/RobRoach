@@ -9,3 +9,8 @@
     height:500px;
     margin: auto;
 }
+.osuhdr{
+    background: url('/img/bucifanbkg.PNG') repeat center center;
+    height: 140px;
+    width: 100%;
+}
