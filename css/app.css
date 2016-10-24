@@ -13,4 +13,9 @@
     background: url('/img/bucifanbkg.PNG') repeat center center;
     height: 140px;
     width: 100%;
+    text-align: center;
+}
+.osuhdr img{
+    margin: 40px auto;
+    
 }
