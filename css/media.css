@@ -1,16 +1,55 @@
-@media (max-width: 480px) {
-
+@media only screen and (max-width : 320px) {
+  body {
+	margin: 0px;
+	padding: 0;
+	background: blue;
+	text-align: justify;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #696969;
+  }
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait){
-
-    html{
-        width: 300px;
-    }
-    .modal-dialog {
-         width: 300px;
-   }
-    .fcmain{
-	   background: lightslategrey;
+  body {
+	margin: 0px;
+	padding: 0;
+	background: white;
+	text-align: justify;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #696969;
+  }
+  .schedule2016{
+      width: 95%;
+      margin: 20px auto;
+      font-size: 24pt;
+     
+  }
+  .schdate{
+      width: 25%;
+      padding-bottom: 6px;
+      
+  }
+  .schteam{
+      width:40%;
+  }
+  .schtime{
+      width: 25%;
+  }
+  .stdRoster{
+      /*display: none;*/
+  }
+  .mblRoster{
+      display: block;
+  }
+  .fcmain{
+      display: none;
+  }
+  .settings{
+      display:block;
+  }
+  .settings a{
+      font-size: 24pt;
   }
 }
