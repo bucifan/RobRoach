@@ -5,8 +5,13 @@
 }
 .mainbox{
     background: url('/img/osu2014nc1.PNG') no-repeat center center;
-    width:500px;
+    width:1500px;
     height:500px;
+    margin: auto;
+}
+.mainbox img{
+    width:750px;
+    height:750px;
     margin: auto;
 }
 .osuhdr{
