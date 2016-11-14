@@ -1,4 +1,6 @@
+var spd=2;
 rotateM();
+var ml;
 
 function rotateM(){
     var logo = $("#smlogo");
@@ -7,20 +9,32 @@ function rotateM(){
     TweenLite.set(".back", {rotationY:-180});
     TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
     var rty = 180;
-    TweenLite.to($(".loadingcard"), 2, {rotationY:180});
-    setInterval(function(){
+
+    TweenLite.to($(".loadingcard"), spd, {rotationY:180});
+    ml = setInterval(function(){
         rty=rty+180;
-        TweenLite.to($(".loadingcard"), 2, {rotationY:rty});
-      
+        TweenLite.to($(".loadingcard"), spd, {rotationY:rty});
     },2100 );
     //setTimeout(function(){ setInterval(function(){TweenLite.to($(".loadingcard"), 2, {rotationY:180});},2100 )},2100);
 
     $(".cardWrapper").hover(
       function() {
-        TweenLite.to($(this).find(".loadingcard"), 1.2, {rotationY:180});
+        clearInterval(ml);
+        spd=0.5;
+        ml = setInterval(function(){
+                rty=rty+180;
+                TweenLite.to($(".loadingcard"), spd, {rotationY:rty});
+             },500 );
       },
       function() {
-        TweenLite.to($(this).find(".loadingcard"), 1.2, {rotationY:360});  
+        clearInterval(ml);
+        rty=rty+180;
+        TweenLite.to($(".loadingcard"), spd, {rotationY:rty});
+        spd=2;
+        ml = setInterval(function(){
+                rty=rty+180;
+                TweenLite.to($(".loadingcard"), spd, {rotationY:rty});
+             },2100 );  
       }
     );
 }
