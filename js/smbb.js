@@ -9,10 +9,10 @@ function rotateM(){
 
     $(".cardWrapper").hover(
       function() {
-        TweenLite.to($(this).find(".card"), 1.2, {rotationY:180, ease:Back.easeOut});
+        TweenLite.to($(this).find(".card"), 1.2, {rotationY:180});
       },
       function() {
-        TweenLite.to($(this).find(".card"), 1.2, {rotationY:0, ease:Back.easeOut});  
+        TweenLite.to($(this).find(".card"), 1.2, {rotationY:0});  
       }
     );
 }
