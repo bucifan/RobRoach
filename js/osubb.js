@@ -16,6 +16,6 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + osubb.games[i].OSUScore + " " + osubb.games[i].OppShort + ": "+osubb.games[i].OppScore+"</span>"); 
           }
       } 
-      alert("games loaded:" + osubb.games.length)
+      //alert("games loaded:" + osubb.games.length)
   })
   .fail(function(){alert("get games error")});
