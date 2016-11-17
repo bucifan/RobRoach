@@ -1,7 +1,7 @@
 $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
   .done(function(osubb){ 
       for(var i=0;i<osubb.games.length;i++){
-          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
+          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' );'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+osubb.games[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> "+osubb.games[i].Opp+"</span>");
           if((osubb.games[i].OSUScore==0)&&(osubb.games[i].OppScore==0)){
