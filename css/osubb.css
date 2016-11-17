@@ -24,9 +24,7 @@ body {
   .schtime{
       width: 25%;
   }
-  .stdRoster{
-      /*display: none;*/
-  }
+
   .mblRoster{
       display: block;
   }
@@ -40,7 +38,6 @@ body {
       font-size: 24pt;
   }
   .gameitem{
-	opacity: 0.0;
 	position: relative;
 	text-align: center;
 	cursor:pointer;
