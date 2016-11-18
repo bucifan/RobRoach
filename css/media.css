@@ -27,12 +27,12 @@
      
   }
   .schdate{
-      width: 20%;
+      width: 10%;
       padding-bottom: 6px;
       
   }
   .schteam{
-      width:50%;
+      width:65%;
       font-size: 29pt;
   }
   .schtime{
@@ -50,4 +50,8 @@
   .settings a{
       font-size: 24pt;
   }
+  .teamimg{
+    height:62px;
+    margin-right:5px;
+}
 }
