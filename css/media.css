@@ -33,14 +33,12 @@
   }
   .schteam{
       width:40%;
+      font-size: 20pt;
   }
   .schtime{
       width: 25%;
   }
-  .stdRoster{
-      /*display: none;*/
-  }
-  .mblRoster{
+   .mblRoster{
       display: block;
   }
   .fcmain{
