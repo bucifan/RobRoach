@@ -3,7 +3,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
       for(var i=0;i<osubb.games.length;i++){
           $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' );'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+osubb.games[i].date+"</span>");
-          $("#gameitem"+i).append("<span class='schteam'> <img src='/img/bball/"+osubb.games[i].OppImage+"' style='height:42px'/>" +osubb.games[i].Opp+"</span>");
+          $("#gameitem"+i).append("<span class='schteam'> <img src='/img/bball/"+osubb.games[i].OppImage+"' class='teamimg'/>" +osubb.games[i].Opp+"</span>");
           if((osubb.games[i].OSUScore==0)&&(osubb.games[i].OppScore==0)){
               $("#gameitem"+i).append("<span class='schtime' id='gamespan"+i+"'  data-at='0' >"+osubb.games[i].Time+"</span>");
               switch(osubb.games[i].TV){
