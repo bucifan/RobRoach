@@ -1,5 +1,6 @@
 $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
   .done(function(osubb){ 
+      var wins=0, losses=0;
       for(var i=0;i<osubb.games.length;i++){
           $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' );'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+osubb.games[i].date+"</span>");
@@ -28,12 +29,15 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
              var worl = "";
              if(osubb.games[i].OSUScore>osubb.games[i].OppScore){
                 worl = "<b style='color:green'> W </b>";
+                wins++;
              } else {
                 worl = "<b style='color:red'> L </b>"; 
+                losses++;
              }
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + osubb.games[i].OSUScore + " " + osubb.games[i].OppShort + ": "+osubb.games[i].OppScore+"</span>"); 
           }
       } 
+      $("#schhrspan").append(" | "+wins + " - " + losses);
       //alert("games loaded:" + osubb.games.length)
   })
   .fail(function(){alert("get games error")});
