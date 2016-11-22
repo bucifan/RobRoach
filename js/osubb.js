@@ -38,7 +38,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
           }
       } 
       $("#schhrspan").append(" | "+wins + " - " + losses);
-      $(".scheduleHdr").append("<a href='http://bucifan-empty-webapp.azurewebsites.net/flashcard.html' class='btn btn-default'>OSU Football Schedule</a>");
+      $(".scheduleHdr").before("<a href='http://bucifan-empty-webapp.azurewebsites.net/flashcard.html' class='btn btn-default'>OSU Football Schedule</a>");
       //alert("games loaded:" + osubb.games.length)
   })
   .fail(function(){alert("get games error")});
