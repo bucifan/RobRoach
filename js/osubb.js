@@ -47,7 +47,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + osubb.games[i].OSUScore + " " + osubb.games[i].OppShort + ": "+osubb.games[i].OppScore+"</span>"); 
           }
       } 
-      $("#schhrspan").append(" | "+wins + " - " + losses+" ("+ btwins " - "+ btlosses +") " );
+      $("#schhrspan").append(" | "+wins + " - " + losses+" ("+ btwins+" - "+ btlosses +") " );
       $(".scheduleHdr").before("<a href='http://bucifan-empty-webapp.azurewebsites.net/flashcard.html' class='btn btn-default'>OSU Football Schedule</a>");
        $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/flashcard.html' class='btn btn-default'>RobRoach Home</a>");
       //alert("games loaded:" + osubb.games.length)
