@@ -1,6 +1,6 @@
 $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
   .done(function(osubb){ 
-      var wins=0, losses=0;
+      var wins=0, losses=0,btwins=0,btlosses=0;
       for(var i=0;i<osubb.games.length;i++){
           $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' );'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+osubb.games[i].date+"</span>");
@@ -34,14 +34,20 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
              if(osubb.games[i].OSUScore>osubb.games[i].OppScore){
                 worl = "<b style='color:green'> W </b>";
                 wins++;
+                if(osubb.games[i].BTG=="1"){
+                  btwins++;
+                }
              } else {
                 worl = "<b style='color:red'> L </b>"; 
                 losses++;
+                 if(osubb.games[i].BTG=="1"){
+                  btlosses++;
+                }
              }
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + osubb.games[i].OSUScore + " " + osubb.games[i].OppShort + ": "+osubb.games[i].OppScore+"</span>"); 
           }
       } 
-      $("#schhrspan").append(" | "+wins + " - " + losses);
+      $("#schhrspan").append(" | "+wins + " - " + losses+" ("+ btwins " - "+ btlosses +") " );
       $(".scheduleHdr").before("<a href='http://bucifan-empty-webapp.azurewebsites.net/flashcard.html' class='btn btn-default'>OSU Football Schedule</a>");
        $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/flashcard.html' class='btn btn-default'>RobRoach Home</a>");
       //alert("games loaded:" + osubb.games.length)
