@@ -1,6 +1,6 @@
 $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
   .done(function(osubb){ 
-      $(".schedule2016").append("<div id='gamesContainer'></div>");
+      $(".schedule2016").append("<div class='gamesContainer'></div>");
       var wins=0, losses=0,btwins=0,btlosses=0;
       var nxtgame=false;
       for(var i=0;i<osubb.games.length;i++){
