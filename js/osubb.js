@@ -59,8 +59,8 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
       $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/flashcard.html' class='btn btn-default'>RobRoach Home</a>");
       setTimeout(function(){
         $(".gamesContainer").animate({
-          'scrollTop': $("[data-nxtgame]").offset().top - 200
-        },2000)
+          'scrollTop': $("[data-nxtgame]").offset().top - 300
+        },500)
       },2000);
       //alert("games loaded:" + osubb.games.length)
   })
