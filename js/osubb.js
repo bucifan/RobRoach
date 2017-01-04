@@ -33,6 +33,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
               }
               if(!nxtgame){
                 $("#gameitem"+i).attr('style','background:#eef0f0');
+                $("#gameitem"+i).attr('data-nxtgame','next');
                 nxtgame=true;
               }
           } else {
@@ -55,7 +56,12 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
       } 
       $("#schhrspan").append(" | "+wins + " - " + losses+" ("+ btwins+" - "+ btlosses +") " );
       $(".scheduleHdr").before("<a href='http://bucifan-empty-webapp.azurewebsites.net/flashcard.html' class='btn btn-default'>OSU Football Schedule</a>");
-       $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/flashcard.html' class='btn btn-default'>RobRoach Home</a>");
+      $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/flashcard.html' class='btn btn-default'>RobRoach Home</a>");
+      setTimeout(function(){
+        $(".gamesContainer").animate({
+          'scrollTop': $("[data-nxtgame]").offset().top - 200
+        },2000)
+      },2000);
       //alert("games loaded:" + osubb.games.length)
   })
   .fail(function(){alert("get games error")});
