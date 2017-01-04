@@ -1,8 +1,10 @@
 $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
   .done(function(osubb){ 
+      $(".schedule2016").append("<div id='gamesContainer'></div>");
       var wins=0, losses=0,btwins=0,btlosses=0;
+      var nxtgame=false;
       for(var i=0;i<osubb.games.length;i++){
-          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' );'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
+          $(".gamesContainer").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+osubb.games[i].OppNH+"' );'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+osubb.games[i].date+"</span>");
           var awayTxt="";
           if(osubb.games[i].Loc == "Away"){
@@ -28,6 +30,10 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osubb")
                   $("#gamespan"+i).append("<img src='/img/bball/cbs_s.png' style='height:20px;'>");
                   break;
                 
+              }
+              if(!nxtgame){
+                $("#gameitem"+i).attr('style','background:#eef0f0');
+                nxtgame=true;
               }
           } else {
              var worl = "";

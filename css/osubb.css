@@ -93,5 +93,8 @@ body {
     text-align: center;
     font-weight: normal;
 }
-
+.gamesContainer{
+    height: 500px;
+    overflow-y: scroll;
+}
 
