@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0px;
 	padding: 0;
-	background: #EDE7DB url('/img/img01.gif') repeat-x left top;
+	/*background: #EDE7DB url('/img/img01.gif') repeat-x left top;*/
 	text-align: justify;
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 11pt;
@@ -178,7 +178,13 @@ img.right {
 	
 }
 .fcmain{
-	width:100%;text-align:center;margin-top:50px;
+	width:100%;text-align:center;margin-top:10px;
+}
+.fctop{
+	width:100%;text-align:center;
+	font-weight: bold;
+	color:white;
+	font-size: 1.5em;
 }
 /* Latest Post */
 
@@ -721,4 +727,48 @@ input {  border: 1px solid #c10435;  }
 .mblRoster{
       display: none;
   }
+/*
+  Added once files added to o365/sharepoint
+*/
+#s4-mini-header{
+	display:none;
+}
+.nsp-main{
+	width:100%;
+	text-align:center;
+}
+.nsp-main a{
+  margin:10px;
+}
+.nsp-bucihdr{
+	height:30px;
+	background-color:maroon;
+	background-image:url('/img/bil.png');
+	background-repeat:repeat-x;
+	width:100%;
+	margin:0px;
+}
+.nsp-butlinks{
+	margin:10px 0px 50px 0px;
+}
+.nsp-rerhdr{
+	background-color:maroon;
+	color:white;
+	height:30px;
+	font-family:Calibri;
+	font-weight:bold;
+	display:inline-block;
+	padding:0px 25px;
+}
+.nsp-buciwht{
+	height:10px;
+	background:white;
+}
+.nsp-buciblk{
+	height:10px;
+	background:black;
+}
+#mypic{
+	margin-bottom:40px;
+}
 
