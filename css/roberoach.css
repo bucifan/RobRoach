@@ -1,0 +1,23 @@
+.nsp-main{
+	padding-top:25px;
+}
+.welcomediv{
+	font-size:2em;
+}
+.introdiv{
+	max-width:1000px;
+	margin:5px auto;
+	text-align:left;
+	font-size:1.5em;
+}
+.thisissp{
+	font-size:.9em;
+	color:#9aa8d4;
+}
+.bottbl{
+	width:100%;
+}
+.bottbl td{
+	width:50%;
+	text-align:center;
+} 
