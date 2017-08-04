@@ -65,6 +65,6 @@ function preload(arrayOfImages) {
 function popgoblow(){
      $(".goblow-body").html("");
      var rdm = Math.floor((Math.random() *  30)); 
-     $(".goblow-body").append("<img src='/siteassets/goblow/goblow ("+rdm+").jpg' style='max-width:500px;box-shadow:5px 5px 5px white;' id='goblowimg'/>");
+     $(".goblow-body").append("<img src='/img/goblow/goblow ("+rdm+").jpg' style='max-width:500px;box-shadow:5px 5px 5px white;' id='goblowimg'/>");
      $("#goblowmodal").modal('show');
 }
