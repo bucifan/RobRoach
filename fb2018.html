@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Bucifan.com</title>
+    <meta name="keywords" content="" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="/img/bil.png" type="image/x-icon"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/DirectionalRotationPlugin.min.js"></script>
+</head>
+
+<body>
+    <div id='settings' class='settings'>
+         <a href='javascript:clearGameData();' class="btn btn-danger" style='margin:auto'>Clear Game Data </a>
+         <a href='javascript:switchDisplay();' class="btn btn-danger" style='margin:auto'>Switch to Roster </a>
+    </div>
+    <div style="" class="fcmain">
+         <img src="img/xmich.png"  onclick="goblow();" style='cursor:pointer'/><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
+        <a class="btn" href="javascript:startFlashCards();" style='background:#c10435;color:white;margin:20px'>Player Flash Cards</a>
+        <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/Settings.png" onclick="togSettings();" class='settingimg'/>
+        <br/><br/>
+        <span id='playerLookup'><b style='color:#F0F0F0;'> Player lookup : </b> <input id='rosterlookup' /></span>
+        <br/><br/>
+     
+     <!--<img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />-->
+    </div>
+    <div style="text-align:center" class='schedule2016' style="margin-top:15px;">
+        <div class="scheduleHdr"> 
+          <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" style="margin-right:20px;"/>
+          2017 Schedule 
+          <img src="img/bil.png" style="margin-left:20px;"/><img src="img/bil.png" /><img src="img/bil.png" />
+        </div>
+       
+    </div>
+    </div>
+    <div class="stdRoster">
+    <div id='rosterDIV' class='rosterDIV'>
+        <table id='rosterTable' class="hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Number</th>
+                <th>Elg.</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>From</th>
+            </tr>
+        </thead>
+        <tbody id='rosterTableBody'></tbody>
+        </table>
+    </div>
+    </div>
+    <div class="mblRoster">
+    <div id='MrosterDIV' class='MrosterDIV'>
+        <table id='MrosterTable' class="hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Number</th>
+                <th>Elg.</th>
+            </tr>
+        </thead>
+        <tbody id='MrosterTableBody'></tbody>
+        </table>
+    </div>
+    </div>
+
+   <div class='retirecd'>Rob can retire in: <span class="kkcountdown" data-time="1588291200"></span></div>
+  
+    <div class="modal fade" tabindex="-1" role="dialog" id="flashcardmodal">
+        <div class="modal-dialog modalFadeIn modal-dialog-center" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary" onclick='clearskip();'>Clear Skips</button>
+                    <button type="button" class="btn btn-default" onclick='skipit();'>Add to Skip</button>
+                    <span style='padding:0px 8px'>|</span>
+                    <!--<button type="button" class="btn btn-danger" onclick='gotit();'>Got It</button>-->
+                    <button type="button" class="btn btn-default" onclick='nextFlashCard();'>Next</button>
+                    <span style='padding:0px 8px'>|</span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="goblowmodal">
+        <div class="modal-dialog modalFadeIn modal-dialog-center" role="document">
+            <div class="modal-content" id='goblowcontent' style="background:transparent;box-shadow:none;border:none">
+                <div class="goblow-body" style="text-align:center;padding:10px;background:transparent"> 
+                    
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.introLoader.pack.min.js"></script>
+    <script src="js/kkcountdown.min.js"></script>
+    <script src="js/jquery.autocomplete.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+    <script src="js/rosterObj.js"></script>
+    <script src="js/fb2017-main.js"></script>
+</body>
+
+</html>
