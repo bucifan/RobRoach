@@ -1,5 +1,10 @@
 $(document).ready(function(){
-  preload([
+    var lastMv = new moment("11/26/2011");
+    var tdy = new moment();
+    var daysFlMv = tdy.diff(lastMv, 'days');
+    console.log("M:" + daysFlMv);
+    
+/*  preload([
     '/img/rer-u.png',
     '/img/rer-ur.png',
     '/img/rer-ul.png',
@@ -24,8 +29,8 @@ $(document).ready(function(){
       //changeImg(e.pageX,e.pageY,750,250,1050,600,'mepic');
       changeImg(e.pageX,e.pageY,hheight,400,hwidth,420,'mepic');
      
-   }); 
-})
+   }); */
+});
 
 
 function changeImg(x,y,cblf,cbtp,cbrt,cbbt,iid)
