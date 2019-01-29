@@ -1,0 +1,107 @@
+body {
+	margin: 0px;
+	padding: 0;
+	background: white;
+	text-align: justify;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #696969;
+  }
+  .schedule2016{
+      width: 95%;
+      margin: 5px auto;
+      font-size: 24pt;
+     
+  }
+  .yrselhdr{
+      font-size: 0.6em;
+      
+  }
+  .yrselhdr span{
+      padding: 3px 8px;
+  }
+  .schdate{
+      width: 25%;
+      padding-bottom: 6px;
+      
+  }
+  .schteam{
+      width:40%;
+  }
+  .schtime{
+      width: 25%;
+  }
+
+  .mblRoster{
+      display: block;
+  }
+  .fcmain{
+      display: none;
+  }
+  .settings{
+      display:block;
+  }
+  .settings a{
+      font-size: 24pt;
+  }
+  .gameitem{
+	position: relative;
+	text-align: center;
+	cursor:pointer;
+}
+.schdate{
+	width: 120px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: left;
+}
+.schteam{
+	display: inline-block;
+	text-align: left;
+	color:black;
+	font-weight: bold;
+
+}
+.schtime{
+	width: 150px;
+	display: inline-block;
+	color:red;
+	text-align: left;
+	white-space: nowrap;
+
+}
+.scheduleHdr{
+	background: maroon;
+	width:100%;
+	color:white;
+	padding: 5px;
+	font-weight: bold; 
+}
+.hidgamedtls{
+	display: none;
+	background-color: maroon;
+	color: white;
+	padding: 10px 5px;
+}
+.hidgamedtls div{
+	position: relative;
+  width: 49%;
+  display: inline;
+  padding-left: 20px;
+  text-align: left;
+}
+.teamimg{
+    height:42px;
+    margin-right:5px;
+}
+.homeaway{
+    color:#656d70;
+    width: 15px;
+    text-align: center;
+    font-weight: normal;
+}
+.gamesContainer{
+    height: 600px;
+    overflow-y: scroll;
+}
+
