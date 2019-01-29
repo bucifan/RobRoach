@@ -2,6 +2,7 @@ $(document).ready(function(){
     var lastMv = new moment("11/26/2011");
     var tdy = new moment();
     var daysFlMv = tdy.diff(lastMv, 'days');
+    $(".lastMv").html("It has been <span style='color:maroon'>"+daysFlMv+"</span> days since TTUN last beat Ohio State!")
     console.log("M:" + daysFlMv);
     
 /*  preload([
