@@ -1,3 +1,10 @@
+/*global $*/
+/*global TweenLite*/
+
+function gohome(){
+  location = "/";
+}
+
 function loadScheduleItems(){
     var game1 = $("#gameitem0");
     var game2 = $("#gameitem1");
