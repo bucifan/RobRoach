@@ -50,10 +50,10 @@ body {
 	cursor:pointer;
 }
 .schdate{
-	width: 120px;
+	width: 180px;
 	font-weight: bold;
 	display: inline-block;
-	text-align: left;
+	text-align: right;
 }
 .schteam{
 	display: inline-block;
@@ -62,14 +62,11 @@ body {
 	font-weight: bold;
 
 }
-.schtime{
-	width: 150px;
-	display: inline-block;
-	color:red;
-	text-align: left;
-	white-space: nowrap;
+.schteam img{
+margin:2px 8px;
 
 }
+
 .scheduleHdr{
 	background: maroon;
 	width:100%;
