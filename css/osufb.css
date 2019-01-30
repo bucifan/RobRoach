@@ -48,6 +48,16 @@ body {
 	position: relative;
 	text-align: center;
 	cursor:pointer;
+	display:inline-block;
+	width:100%;
+}
+.gameitemleft{
+    width:40%;
+    
+}
+.gameitemright{
+  width:40%;   
+  text-align:left;
 }
 .schdate{
 	width: 180px;
