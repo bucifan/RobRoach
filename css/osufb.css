@@ -103,7 +103,8 @@ margin:2px 8px;
 }
 .yrseldtls{
     display:inline-block;
-    width:85%;
+    width:65%;
+    margin:auto;
     background-image: url("/img/buckeyestripe2.png");
     background-position: center;
     background-repeat: repeat-y;
