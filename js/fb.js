@@ -1,8 +1,15 @@
 /*global $*/
 /*global TweenLite*/
-
+var SYear = 2019;
 function gohome(){
   location = "/";
+}
+
+function prevSYear(){
+    
+}
+function nextSYear(){
+    
 }
 
 function loadScheduleItems(){
@@ -37,7 +44,7 @@ function loadScheduleItems(){
 $.getJSON("https://bucifan-api.azurewebsites.net/fbs/2019")
   .done(function(season){ 
       for(var i=0;i<season.games.length;i++){
-          $(".schedule").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+season.games[i].Opp+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
+          $(".yrseldtls").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+season.games[i].Opp+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+season.games[i].GameDate+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+season.games[i].OppImage+"' />"+season.games[i].Opp+"</span>");
           //if(i==11){

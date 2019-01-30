@@ -104,4 +104,10 @@ body {
     height: 600px;
     overflow-y: scroll;
 }
+.yrseldtls{
+    display:inline-block;
+    background-image: url("/img/buckeyestripe2.png");
+    background-position: center;
+    background-repeat: round;
+}
 
