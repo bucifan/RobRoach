@@ -74,3 +74,6 @@ function popgoblow(){
      $(".goblow-body").append("<img src='/img/goblow/goblow ("+rdm+").jpg' style='max-width:500px;box-shadow:5px 5px 5px white;' id='goblowimg'/>");
      $("#goblowmodal").modal('show');
 }
+function gotoLinkedIn(){
+    location.href="https://www.linkedin.com/in/roberoach/";
+}
