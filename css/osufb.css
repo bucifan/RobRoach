@@ -68,7 +68,7 @@ body {
 	width: 180px;
 	font-weight: bold;
 	display: inline-block;
-	text-align: right;
+	text-align:left;
 }
 .schteam{
 	display: inline-block;
