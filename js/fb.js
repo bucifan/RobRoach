@@ -75,7 +75,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/fbs/"+SYear)
           
       //} 
       //alert("games loaded:" + games.y2016.length)
-      //setTimeout(loadScheduleItems, 500);
+      setTimeout(loadScheduleItems, 500);
   })
   .fail(function(){alert("get games error")});
 }

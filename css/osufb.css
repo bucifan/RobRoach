@@ -50,7 +50,7 @@ body {
 	cursor:pointer;
 	display:inline-block;
 	width:100%;
-	opacity: 0;
+	opacity: 0.0;
 }
 .gameitemleft{
     width:40%;
