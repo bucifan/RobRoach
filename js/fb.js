@@ -45,7 +45,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/fbs/2019")
   .done(function(season){ 
       for(var i=0;i<season.games.length;i++){
           $(".yrseldtls").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+season.games[i].Opp+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
-          $("#gameitem"+i).append("<div class='gameitemleft'><span class='schdate'> "+season.games[i].GameDate+"</span></div><div class='gameitemmid'><img src='/img/helmets/"+season.games[i].OppImage+"' /></div>");
+          $("#gameitem"+i).append("<div class='gameitemleft'><span class='schdate'> "+season.games[i].GameDate+"</span></div><div class='gameitemmid'><img src='/img/logos/"+season.games[i].OppImage+"' /></div>");
           $("#gameitem"+i).append("<div class='gameitemright'><span class='schteam'>"+season.games[i].Opp+"</span></div>");
           //if(i==11){
         //      for(var j=0;j<4;j++){ 
