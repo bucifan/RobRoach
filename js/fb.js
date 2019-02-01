@@ -1,15 +1,21 @@
 /*global $*/
 /*global TweenLite*/
 var SYear = 2019;
+$(".yrseldtls").html("Year: " + SYear);
+getGames();
+
 function gohome(){
   location = "/";
 }
 
 function prevSYear(){
-    
+  SYear--;
+  $(".yrseldtls").html("Year: " + SYear);
+  
 }
 function nextSYear(){
-    
+    SYear++;
+    $(".yrseldtls").html("Year: " + SYear);
 }
 
 function loadScheduleItems(){
@@ -40,8 +46,8 @@ function loadScheduleItems(){
     TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
     TweenLite.to(game13,1,{opacity:1.0,  delay:5.5});
 }
-
-$.getJSON("https://bucifan-api.azurewebsites.net/fbs/2019")
+function getGames(){
+$.getJSON("https://bucifan-api.azurewebsites.net/fbs/"+SYear)
   .done(function(season){ 
       for(var i=0;i<season.games.length;i++){
           $(".yrseldtls").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+season.games[i].Opp+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
@@ -72,4 +78,4 @@ $.getJSON("https://bucifan-api.azurewebsites.net/fbs/2019")
       //setTimeout(loadScheduleItems, 500);
   })
   .fail(function(){alert("get games error")});
-
+}
