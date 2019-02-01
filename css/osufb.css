@@ -50,6 +50,7 @@ body {
 	cursor:pointer;
 	display:inline-block;
 	width:100%;
+	opacity: 0;
 }
 .gameitemleft{
     width:40%;
@@ -82,8 +83,8 @@ body {
 	white-space: nowrap;
 
 }
-.schteam img{
-margin:12px 8px;
+.gameitemmid img{
+margin:12px 2px;
 
 }
 
