@@ -10,12 +10,16 @@ function gohome(){
 
 function prevSYear(){
   SYear--;
-  $(".yrseldtls").html("Year: " + SYear);
+  $(".yrseldtls").html("<span class='loadingData'>Loading schedule for year: " + SYear+ "</span>");
+  $(".currYearnav").html(SYear);
+  getGames();
   
 }
 function nextSYear(){
     SYear++;
-    $(".yrseldtls").html("Year: " + SYear);
+    $(".yrseldtls").html("<span class='loadingData'>Loading schedule for year: " + SYear+ "</span>");
+    $(".currYearnav").html(SYear);
+    getGames();
 }
 
 function loadScheduleItems(){
@@ -45,6 +49,7 @@ function loadScheduleItems(){
     TweenLite.to(game11,1,{opacity:1.0,  delay:5});
     TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
     TweenLite.to(game13,1,{opacity:1.0,  delay:5.5});
+    $(".loadingData").slideUp(500,function(){$(".loadingData").remove();})
 }
 function getGames(){
 $.getJSON("https://bucifan-api.azurewebsites.net/fbs/"+SYear)
