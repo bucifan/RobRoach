@@ -73,22 +73,15 @@ $.getJSON("https://bucifan-api.azurewebsites.net/fbs/"+SYear)
         //      }
         //  }
         if((season.games[i].OSUScore!=0)&&(season.games[i].OppScore!=0)){
-        //      $("#gameitem"+i).append("<span class='schtime'  data-at='0' >"+games.y2017[i].Start+"</span>");
-        //  } else {
-           var worl = "";
-           if(season.games[i].OSUScore>season.games[i].OppScore){
-                worl = "<b style='color:green'> W </b>";
-            } else {
-               worl = "<b style='color:red'> L </b>"; 
-            }
-             $("#gameid"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + season.games[i].OSUScore + " " + season.games[i].OppShort + ": "+season.games[i].OppScore+"</span>"); 
-        //     $("#gamedtl"+i).append("<div style='float:left'><b> Total Yards: </b> " + games.y2017[i].tyards + "<br/><b> Passing Yards: </b> " + games.y2017[i].pyards + "<br/><b> Rushing Yards: </b> " + games.y2017[i].ryards + "<br/></div>");
-        //     $("#gamedtl"+i).append("<div style='float:right'><b> Average Yards per play: </b> " + games.y2017[i].ypp + "<br/><b> Yards given up: </b> " + games.y2017[i].ygivenup + "<br/><br/></div>");
-        //     $("#gamedtl"+i).append("<br/><div style='width:100%;text-align:left;display:block'><b> Notes: </b> " + games.y2017[i].mynotes + "<br/></div>");
+          var worl = "";
+          if(season.games[i].OSUScore>season.games[i].OppScore){
+            worl = "<b style='color:green'> W </b>";
+          } else {
+            worl = "<b style='color:red'> L </b>"; 
           }
-          
-      //} 
-      //alert("games loaded:" + games.y2016.length)
+          $("#gameid"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + season.games[i].OSUScore + " " + season.games[i].OppShort + ": "+season.games[i].OppScore+"</span>"); 
+        }
+      }    
       setTimeout(loadScheduleItems, 500);
   })
   .fail(function(){alert("get games error")});
