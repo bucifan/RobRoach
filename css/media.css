@@ -58,3 +58,17 @@
   }
 
 }
+/* my Phone */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+  body {
+
+	padding: 0px 20px;
+	background: white;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: red;
+  }
+}
