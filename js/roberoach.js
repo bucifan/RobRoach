@@ -1,3 +1,5 @@
+/*global $*/
+/*global moment*/
 $(document).ready(function(){
     $(".contactFooter").append("<br/> ua:" + navigator.userAgent );
 
