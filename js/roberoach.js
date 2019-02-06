@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $(".contactFooter").append("<br/> ua:" + navigator.userAgent );
+
     var lastMv = new moment("11/26/2011");
     var tdy = new moment();
     var daysFlMv = tdy.diff(lastMv, 'days');
