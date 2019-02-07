@@ -41,16 +41,16 @@
 }
 @media screen and (max-width: 1000px) {
   body {
-	margin: 0px;
+	margin: 0px 20px;
 	padding: 0;
 	background: white;
 	text-align: justify;
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
-	font-size: 14pt;
-	color: orange;
+	font-size: 2em;
+	color: black;
   }
   .contactFooter{
-    color:#a028c7; /*purple*/
+    color:#a52122; /*red*/
   }
 
 }
