@@ -1,3 +1,6 @@
+.contactFooter{
+  color:#2868C7;
+}
 @media only screen and (max-width : 320px) {
   body {
 	margin: 0px;
@@ -32,7 +35,9 @@
 	font-size: 14pt;
 	color: green;
   }
-
+  .contactFooter{
+    color:#28c751;
+  }
 }
 @media screen and (max-width: 1000px) {
   body {
@@ -43,6 +48,9 @@
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 14pt;
 	color: orange;
+  }
+  .contactFooter{
+    color:#a028c7; /*purple*/
   }
 
 }
@@ -71,4 +79,24 @@
 	font-size: 14pt;
 	color: red;
   }
+    .contactFooter{
+    color:#d8cf3f; /*yellow*/
+  }
+
+}
+/* my Phone */
+@media screen 
+and (-webkit-device-pixel-ratio: 4) {
+  body {
+
+	padding: 0px 20px;
+	background: white;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: red;
+  }
+    .contactFooter{
+    color:#615d13; /*brown*/
+  }
+
 }
