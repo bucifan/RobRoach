@@ -5,6 +5,7 @@ $(document).ready(function(){
     $(".contactFooter").append("<br/> ua:" + navigator.userAgent );
     if(navigator.userAgent.toLowerCase().indexOf("android")>0){
         $("body").addClass("myMobile");
+        $("body").append("<div>Mobile</div>")
     }
     var lastMv = new moment("11/26/2011");
     var tdy = new moment();
