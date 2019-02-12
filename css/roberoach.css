@@ -38,3 +38,13 @@
 	text-align: center;
 	padding-top: 5px;
 }
+.myMobile{
+	margin: 0px 40px;
+	padding: 0;
+	background: white;
+	text-align: justify;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 3em;
+	color: black;
+
+}

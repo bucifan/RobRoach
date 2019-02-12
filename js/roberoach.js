@@ -1,8 +1,11 @@
 /*global $*/
 /*global moment*/
+/*global navigator*/
 $(document).ready(function(){
     $(".contactFooter").append("<br/> ua:" + navigator.userAgent );
-
+    if(navigator.userAgent.toLowerCase().indexOf("android")>0){
+        $("body").addClass("myMobile");
+    }
     var lastMv = new moment("11/26/2011");
     var tdy = new moment();
     var daysFlMv = tdy.diff(lastMv, 'days');
