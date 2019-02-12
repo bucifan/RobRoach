@@ -67,11 +67,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/fbs/"+SYear)
           $(".yrseldtls").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+season.games[i].Opp+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<div class='gameitemleft'><span class='schdate' > "+season.games[i].GameDate+"</span></div><div class='gameitemmid' id='gameid"+i+"'><img src='/img/logos/"+season.games[i].OppImage+"' /></div>");
           $("#gameitem"+i).append("<div class='gameitemright'><span class='schteam'>"+season.games[i].Opp+"</span></div>");
-          //if(i==11){
-        //      for(var j=0;j<4;j++){ 
-        //        $("#gamedtl"+i).append("<img src='/img/screwblueBrutusStompTSUN.gif'/>");
-        //      }
-        //  }
+
         if((season.games[i].OSUScore!=0)&&(season.games[i].OppScore!=0)){
           var worl = "";
           if(season.games[i].OSUScore>season.games[i].OppScore){
@@ -79,7 +75,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/fbs/"+SYear)
           } else {
             worl = "<b style='color:red'> L </b>"; 
           }
-          $("#gameid"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + season.games[i].OSUScore + " " + season.games[i].OppShort + ": "+season.games[i].OppScore+"</span>"); 
+          $("#gameid"+i).append("<span class='gresults' style='color:black' >"+worl+" OSU: " + season.games[i].OSUScore + " " + season.games[i].OppShort + ": "+season.games[i].OppScore+"</span>"); 
         }
       }    
       setTimeout(loadScheduleItems, 500);
