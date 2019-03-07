@@ -40,11 +40,20 @@
 }
 .myMobile{
 	margin: 0px 40px;
-	padding: 0;
+	padding: 0px;
 	background: white;
 	text-align: justify;
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 3em;
 	color: black;
 
+}
+.myMobile.btn{
+  font-size: 3em;
+}
+.myMobile.introdiv{
+	margin-left:15px;
+}
+.myMobile.bottbl{
+	width: 100%;
 }
