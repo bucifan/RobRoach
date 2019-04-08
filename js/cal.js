@@ -1,6 +1,6 @@
 //var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/private-531ebe4bc8de406c1eaf2132085f1be1/basic.ics";
 var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/public/basic.ics"
-console.log("3")
+console.log("4")
 var request = new XMLHttpRequest();
 
 request.open('GET',calendarUrl);
