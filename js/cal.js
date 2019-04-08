@@ -1,6 +1,7 @@
 //var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/private-531ebe4bc8de406c1eaf2132085f1be1/basic.ics";
 var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/public/basic.ics"
-$.get(calendarUrl).then(function (data) {
+console.log("1")
+$.getScript(calendarUrl).then(function (data) {
   // parse the ics data
   var jcalData = ICAL.parse(data.trim());
   var comp = new ICAL.Component(jcalData);
