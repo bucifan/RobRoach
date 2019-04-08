@@ -1,9 +1,10 @@
 //var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/private-531ebe4bc8de406c1eaf2132085f1be1/basic.ics";
 var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/public/basic.ics"
-console.log("2")
+console.log("3")
 var request = new XMLHttpRequest();
-request.setRequestHeader('Access-Control-Allow-Headers', '*');
+
 request.open('GET',calendarUrl);
+request.setRequestHeader('Access-Control-Allow-Headers', '*');
 request.onreadystatechange = function (data) {
 
 
