@@ -1,7 +1,15 @@
 //var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/private-531ebe4bc8de406c1eaf2132085f1be1/basic.ics";
 var calendarUrl = "http://calendar.google.com/calendar/ical/bucifan%40gmail.com/public/basic.ics"
+console.log("2")
+var request = new XMLHttpRequest();
+request.setRequestHeader('Access-Control-Allow-Headers', '*');
+request.open('GET',calendarUrl);
+request.onreadystatechange = function (data) {
+
+
+
 console.log("1")
-$.getScript(calendarUrl).then(function (data) {
+//$.getScript(calendarUrl).then(function (data) {
   // parse the ics data
   var jcalData = ICAL.parse(data.trim());
   var comp = new ICAL.Component(jcalData);
@@ -41,4 +49,5 @@ $.getScript(calendarUrl).then(function (data) {
         right: 'today,month,basicWeek,listDay prev,next'
     }
   });
-});
+//});
+}
